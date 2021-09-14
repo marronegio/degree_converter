@@ -36,7 +36,9 @@ export const Content = styled.div`
     width: 140px;
     height: 80px;
     font-size: 2.5rem;
-    text-align: center;     
+    text-align: center; 
+    -webkit-appearance: none;    
+    -moz-appearance: textfield;
 }
 `;
 
