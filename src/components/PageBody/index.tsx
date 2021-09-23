@@ -20,10 +20,10 @@ export function PageBody() {
   function calculateDegree() {
     if (selectedOption === Options.CELSIUS_TO_FAHRENHEIT) {
       const calc = Number(degree) * 9/5 + 32;
-      return `${calc} °F`;
+      return `${calc.toFixed(2)} °F`;
     }
     const calc = (Number(degree) - 32) * 5/9;
-    return `${calc} °C`;
+    return `${calc.toFixed(2)} °C`;
   }
 
   Number()
@@ -59,6 +59,7 @@ export function PageBody() {
             <input
               type="number"
               id="inputDegree"
+              placeholder="0"
               value={degree}
               onChange={(e) => setDegree(e.target.value)}
             />

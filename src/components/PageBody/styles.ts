@@ -81,5 +81,5 @@ export const TemperatureUnit = styled.p`
 export const Result  = styled.p`
   margin-left: 1rem;
   font-size: 3.3rem;
-  color: var(--orange)
+  color: var(--orange);
 `;
