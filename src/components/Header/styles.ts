@@ -22,5 +22,21 @@ export const Content = styled.div`
   p {
     margin-top: 0.5rem;
     font-size: 1.2rem;
+    text-align: center;
+  }
+
+  @media (max-width: 719px) {
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    align-self: center;
+    font-size: 2rem;
+    h1 {
+      font-size: 3rem;
+    }
   }
 `;

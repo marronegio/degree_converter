@@ -1,4 +1,10 @@
-import { Container, Content, OptionButton, Result, TemperatureUnit } from "./styles";
+import {
+  Container,
+  Content,
+  OptionButton,
+  Result,
+  TemperatureUnit,
+} from "./styles";
 import { useState } from "react";
 
 enum Options {
@@ -19,14 +25,14 @@ export function PageBody() {
 
   function calculateDegree() {
     if (selectedOption === Options.CELSIUS_TO_FAHRENHEIT) {
-      const calc = Number(degree) * 9/5 + 32;
+      const calc = (Number(degree) * 9) / 5 + 32;
       return `${calc.toFixed(2)} °F`;
     }
-    const calc = (Number(degree) - 32) * 5/9;
+    const calc = ((Number(degree) - 32) * 5) / 9;
     return `${calc.toFixed(2)} °C`;
   }
 
-  Number()
+  Number();
 
   return (
     <header>
@@ -64,10 +70,11 @@ export function PageBody() {
               onChange={(e) => setDegree(e.target.value)}
             />
             {celsiusToFahrenheit()}
+            </div>
             <Result>
-            <span>{calculateDegree()}</span>
+              <span>{calculateDegree()}</span>
             </Result>
-          </div>
+          
         </Content>
       </Container>
     </header>
