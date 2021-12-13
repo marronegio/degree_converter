@@ -1,1 +1,1 @@
-# degree_converter, an application that converts temperature
+# Degree Converter, an application that converts temperature
