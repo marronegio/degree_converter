@@ -1,73 +1,92 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.form`
-  position: fixed;
+export const Container = styled.div`
   display: flex;
+  flex-direction: column;
   background-color: var(--background);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  /* height: 960px; */
+  padding-bottom: 3rem;
 
-  h1 {
-    user-select: none;
+  .page-title {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+  .subtitle {
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
   }
 `;
 export const Content = styled.div`
-  margin: 0 auto;
-  max-width: 80%;
-  display: flex;
-  margin-top: 2rem;
-  font-size: 2rem;
-  flex-direction: column;
-  align-items: center;
 
-  @media (max-width: 219px) {
-    margin-left: 8%;
-    margin-right: 8%;
-  }
+  .creator-area {
+    color: white;
+    margin-top: 1.5rem;
 
-  .option-buttons {
-    display: flex;
-  }
-
-  .divider {
-    width: 80px;
-    height: auto;
-    display: inline-block;
-  }
-
-  .instructions {
-    margin-bottom: 2rem;
-    text-align: center;
+    p {
+      margin-bottom: .2rem
+    }
+    
+    .social {
+      gap: 3rem;
+      width: fit-content;
+      margin: 0 auto;
+    }
+    .github-link{
+      width: 2rem;
+      margin-right: .5rem;
+      opacity: 50%;
+      transition: ease-in-out 100ms;
+      
+      :hover {
+        border-radius: 50%;
+        opacity: 100%;
+      }
+    }
+    .linkedin-link{
+      width: 2rem;
+      margin-left: .5rem;
+      opacity: 50%;
+      transition: ease-in-out 100ms;
+      
+      :hover {
+        border-radius: 50%;
+        opacity: 100%;
+      }
+    }
   }
 
   input {
-    width: 140px;
-    height: 80px;
-    font-size: 3rem;
-    text-align: center;
-    -webkit-appearance: none;
-    -moz-appearance: textfield;
-
-    @media (max-width: 719px) {
-      width: 76px;
-      height: 50px;
-      font-size: 1.5rem;
-      text-align: center;
-      -webkit-appearance: none;
-      -moz-appearance: textfield;
-    }
+    border-radius: 1rem;
   }
-  .input-area {
+
+  @media (max-width: 720px) /* Mobile */ {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin: 0 auto;
+    max-width: 80%;
     display: flex;
-    width: 100%;
-    flex-direction: row;
+    margin-top: 2rem;
+    font-size: 2rem;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-  }
+    border-radius: 30px;
+    border: 1px solid #ffaa29;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #242424;
 
-  @media (max-width: 719px) {
+    .option-buttons {
+      display: flex;
+    }
+
     .divider {
-      width: 20px;
+      width: 1.5rem;
       height: auto;
       display: inline-block;
     }
@@ -75,6 +94,225 @@ export const Content = styled.div`
     .instructions {
       margin-bottom: 2rem;
       text-align: center;
+      color: white;
+    }
+
+    input {
+      width: 120px;
+      height: 80px;
+      font-size: 3rem;
+      text-align: center;
+      -webkit-appearance: none;
+      -moz-appearance: textfield;
+    }
+    .input-area {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tutorial-title {
+      color: white;
+      margin-top: 1rem;
+      font-size: 2.25rem;
+    }
+
+    .tutorial-cards {
+      margin-top: 2.37rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.8rem;
+    }
+
+    .tutorial-card {
+      background-color: #333333;
+      color: white;
+      padding: 1.2rem;
+      border-radius: 30px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .card-title {
+      font-size: 1.6rem;
+      margin-bottom: 1.8rem;
+      font-weight: 700;
+    }
+
+    .card-formula {
+      color: var(--orange);
+      margin-top: 1.8rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (min-width: 720px) /* Tablet */ {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin: 0 auto;
+    max-width: 80%;
+    display: flex;
+    margin-top: 2rem;
+    font-size: 2rem;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid #ffaa29;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #242424;
+
+    .option-buttons {
+      display: flex;
+    }
+
+    .divider {
+      width: 50px;
+      height: auto;
+      display: inline-block;
+    }
+
+    .instructions {
+      margin-bottom: 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    input {
+      width: 140px;
+      height: 80px;
+      font-size: 3rem;
+      text-align: center;
+      -webkit-appearance: none;
+      -moz-appearance: textfield;
+    }
+    .input-area {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tutorial-title {
+      color: white;
+      margin-top: 1rem;
+      font-size: 2.25rem;
+    }
+
+    .tutorial-cards {
+      margin-top: 2.37rem;
+      display: flex;
+      gap: 2.8rem;
+      flex-direction: column;
+    }
+
+    .tutorial-card {
+      background-color: #333333;
+      color: white;
+      padding: 1.2rem;
+      border-radius: 30px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 1.6rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .card-formula {
+      color: var(--orange);
+      margin-top: 1.8rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (min-width: 960px) {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin: 0 auto;
+    max-width: 80%;
+    display: flex;
+    margin-top: 2rem;
+    font-size: 2rem;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid #ffaa29;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #242424;
+    margin-top: 3rem;
+
+    .option-buttons {
+      display: flex;
+    }
+
+    .divider {
+      width: 50px;
+      height: auto;
+      display: inline-block;
+    }
+
+    .instructions {
+      margin-bottom: 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    input {
+      width: 140px;
+      height: 80px;
+      font-size: 3rem;
+      text-align: center;
+      -webkit-appearance: none;
+      -moz-appearance: textfield;
+    }
+    .input-area {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tutorial-title {
+      color: white;
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+
+    .tutorial-cards {
+      margin-top: 1rem;
+      display: flex;
+      gap: 2.8rem;
+      flex-direction: row;
+    }
+
+    .tutorial-card {
+      background-color: #333333;
+      color: white;
+      padding: 1.2rem;
+      border-radius: 30px;
+      width: 50%;
+      height: 14rem;
+      text-align: center;
+      height: fit-content;
+    }
+
+    .card-title {
+      font-size: 1.6rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .card-formula {
+      height: 20%;
+      margin: 0 auto;
+      color: var(--orange);
+      margin-top: 0.8rem;
+      font-size: 1.25rem;
     }
   }
 `;
@@ -84,30 +322,33 @@ interface OptionButtonProps {
 }
 
 export const OptionButton = styled.button<OptionButtonProps>`
-max-width: 400px;
+  max-width: 400px;
   width: 30vw;
   height: 100px;
+  padding: 1rem;
   margin-bottom: 2rem;
-  background-color: var(--dark);
-  color: white;
+  background-color: white;
+  color: #252525;
   font-size: 1.5rem;
   font-weight: 600;
-  border-radius: 0.5rem;
+  border-radius: 25px;
   border: none;
   transition: 100ms;
+  margin-top: -3.2rem;
 
   ${(props) =>
     props.isSelected &&
     css`
       background-color: var(--orange);
+      color: white;
     `}
 
   @media (max-width: 719px) {
-    width: 140px;
+    width: 50%;
     height: 60px;
     margin-bottom: 2rem;
-    background-color: var(--dark);
-    color: white;
+    background-color: white;
+    color: #252525;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 0.5rem;
@@ -118,12 +359,15 @@ max-width: 400px;
       props.isSelected &&
       css`
         background-color: var(--orange);
+        color: white;
       `}
   }
 `;
 export const TemperatureUnit = styled.p`
   margin-left: 1rem;
   font-size: 3.3rem;
+  font-weight: 700;
+  color: white;
 
   @media (max-width: 719px) {
     margin-left: 1rem;
@@ -131,10 +375,9 @@ export const TemperatureUnit = styled.p`
   }
 `;
 export const Result = styled.p`
-  margin-top: 1rem;
   margin-left: 1rem;
   font-size: 3.3rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--orange);
 
   @media (max-width: 719px) {
