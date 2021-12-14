@@ -21,7 +21,7 @@ export const Container = styled.div`
       text-align: center;
       color: white;
       font-weight: 700;
-      font-size: .9rem;
+      font-size: 0.9rem;
       margin-bottom: 2rem;
     }
   }
@@ -105,6 +105,11 @@ export const Content = styled.div`
   input {
     border-radius: 1rem;
   }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
   @media (max-width: 720px) /* Mobile */ {
     margin-left: 8%;
@@ -164,7 +169,7 @@ export const Content = styled.div`
 
     .tutorial-title {
       color: white;
-      margin-top: 1rem;
+      margin-top: 2rem;
       font-size: 1.5rem;
       text-align: center;
     }
@@ -260,7 +265,7 @@ export const Content = styled.div`
 
     .tutorial-title {
       color: white;
-      margin-top: 1rem;
+      margin-top: 3rem;
       font-size: 2.25rem;
     }
 
@@ -291,7 +296,7 @@ export const Content = styled.div`
     }
   }
 
-  @media (min-width: 960px) {
+  @media (min-width: 960px) /* Desktop */ {
     margin-left: 8%;
     margin-right: 8%;
     margin: 0 auto;
@@ -342,7 +347,7 @@ export const Content = styled.div`
 
     .tutorial-title {
       color: white;
-      margin-top: 1rem;
+      margin-top: 3rem;
       font-size: 2rem;
     }
 
