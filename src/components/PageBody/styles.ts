@@ -8,53 +8,94 @@ export const Container = styled.div`
   /* height: 960px; */
   padding-bottom: 3rem;
 
-  .page-title {
-    width: 40%;
-    margin: 0 auto;
-    margin-top: 2rem;
+  @media (max-width: 720px) /* Mobile */ {
+    .page-title {
+      width: 85%;
+      margin: 0 auto;
+      margin-top: 2rem;
+    }
+
+    .subtitle {
+      margin-top: 0.5rem;
+      font-size: 80%;
+      text-align: center;
+      color: white;
+      font-weight: 700;
+      font-size: .9rem;
+      margin-bottom: 2rem;
+    }
   }
-  .subtitle {
-    text-align: center;
-    color: white;
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-top: -0.5rem;
-    margin-bottom: 2rem;
+  @media (min-width: 720px) /* Tablet */ {
+    .page-title {
+      width: 85%;
+      margin: 0 auto;
+      margin-top: 2rem;
+    }
+
+    .subtitle {
+      margin-bottom: 3rem;
+      margin-top: 0.5rem;
+      font-size: 80%;
+      text-align: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-top: -0.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+  @media (min-width: 960px) /* Desktop */ {
+    .page-title {
+      width: 40%;
+      min-width: 540px;
+      margin: 0 auto;
+      margin-top: 2rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-top: -0.5rem;
+      margin-bottom: 2rem;
+    }
   }
 `;
 export const Content = styled.div`
-
   .creator-area {
     color: white;
     margin-top: 1.5rem;
 
     p {
-      margin-bottom: .2rem
+      margin-bottom: 0.2rem;
     }
-    
+
     .social {
       gap: 3rem;
       width: fit-content;
       margin: 0 auto;
     }
-    .github-link{
+    .github-link {
       width: 2rem;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
       opacity: 50%;
-      transition: ease-in-out 100ms;
-      
+      transition: ease-in-out 200ms;
+
       :hover {
+        border: 1px solid var(--orange);
         border-radius: 50%;
         opacity: 100%;
       }
     }
-    .linkedin-link{
+    .linkedin-link {
       width: 2rem;
-      margin-left: .5rem;
+      margin-left: 0.5rem;
       opacity: 50%;
-      transition: ease-in-out 100ms;
-      
+      transition: ease-in-out 200ms;
+
       :hover {
+        border: 1px solid var(--orange);
         border-radius: 50%;
         opacity: 100%;
       }
@@ -77,8 +118,8 @@ export const Content = styled.div`
     align-items: center;
     border-radius: 30px;
     border: 1px solid #ffaa29;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     background-color: #242424;
 
     .option-buttons {
@@ -92,22 +133,30 @@ export const Content = styled.div`
     }
 
     .instructions {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       text-align: center;
       color: white;
+      font-size: 1rem;
     }
 
     input {
-      width: 120px;
-      height: 80px;
-      font-size: 3rem;
+      width: 100px;
+      height: 60px;
+      font-size: 2rem;
+      margin-left: 1rem;
       text-align: center;
       -webkit-appearance: none;
       -moz-appearance: textfield;
     }
     .input-area {
       display: flex;
-      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .input-and-unit {
+      display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
@@ -116,7 +165,8 @@ export const Content = styled.div`
     .tutorial-title {
       color: white;
       margin-top: 1rem;
-      font-size: 2.25rem;
+      font-size: 1.5rem;
+      text-align: center;
     }
 
     .tutorial-cards {
@@ -136,7 +186,7 @@ export const Content = styled.div`
     }
 
     .card-title {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       margin-bottom: 1.8rem;
       font-weight: 700;
     }
@@ -145,6 +195,13 @@ export const Content = styled.div`
       color: var(--orange);
       margin-top: 1.8rem;
       font-size: 1.25rem;
+    }
+
+    .creator-area {
+      p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
     }
   }
 
@@ -194,6 +251,11 @@ export const Content = styled.div`
       flex-direction: row;
       align-items: center;
       justify-content: center;
+    }
+
+    .input-and-unit {
+      display: flex;
+      /* flex-direction: row; */
     }
 
     .tutorial-title {
@@ -345,8 +407,9 @@ export const OptionButton = styled.button<OptionButtonProps>`
 
   @media (max-width: 719px) {
     width: 50%;
-    height: 60px;
+    height: fit-content;
     margin-bottom: 2rem;
+    margin-top: -3rem;
     background-color: white;
     color: #252525;
     font-size: 1rem;

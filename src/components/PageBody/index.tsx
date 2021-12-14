@@ -40,8 +40,10 @@ export function PageBody() {
   return (
     <header>
       <Container>
-      <img src={ title } alt="Degree Converter" className="page-title"/>
-          <p className="subtitle">Conversor de temperatura celsius e fahrenheit</p>
+        <img src={title} alt="Degree Converter" className="page-title" />
+        <p className="subtitle">
+          Conversor de temperatura celsius e fahrenheit
+        </p>
         <Content>
           <div className="option-buttons">
             <OptionButton
@@ -69,14 +71,16 @@ export function PageBody() {
             </strong>
           </p>
           <div className="input-area">
-            <input
-              type="number"
-              id="inputDegree"
-              placeholder="0"
-              value={degree}
-              onChange={(e) => setDegree(e.target.value)}
-            />
-            {celsiusToFahrenheit()}
+            <div className="input-and-unit">
+              <input
+                type="number"
+                id="inputDegree"
+                placeholder="0"
+                value={degree}
+                onChange={(e) => setDegree(e.target.value)}
+              />
+              {celsiusToFahrenheit()}
+            </div>
             <Result>
               <span>{calculateDegree()}</span>
             </Result>
@@ -85,20 +89,44 @@ export function PageBody() {
           <div className="tutorial-cards">
             <div className="tutorial-card">
               <p className="card-title">Celsius para Fahrenheit</p>
-              <p className="card-instructions">Primeiro, multiplique a temperatura em Celsius por 9. Então, divida o resultado por 5 e por fim, some 32 ao resultado. Logo abaixo você pode conferir  a fórmula desse cálculo:</p>
+              <p className="card-instructions">
+                Primeiro, multiplique a temperatura em Celsius por 9. Então,
+                divida o resultado por 5 e por fim, some 32 ao resultado. Logo
+                abaixo você pode conferir a fórmula desse cálculo:
+              </p>
               <p className="card-formula">(0 °C × 9/5) + 32 = 32 °F</p>
             </div>
             <div className="tutorial-card">
               <p className="card-title">Fahrenheit para Celsius</p>
-              <p className="card-instructions">Primeiro, subtraia  a temperatura em Fahrenheit em 32. Então, multiplique o resultado por 5 e por fim, divida o resultado por 9. Logo abaixo você pode conferir  a fórmula desse cálculo:</p>
+              <p className="card-instructions">
+                Primeiro, subtraia a temperatura em Fahrenheit em 32. Então,
+                multiplique o resultado por 5 e por fim, divida o resultado por
+                9. Logo abaixo você pode conferir a fórmula desse cálculo:
+              </p>
               <p className="card-formula">(32 °F − 32) × 5/9 = 0 °C</p>
             </div>
           </div>
           <div className="creator-area">
             <p>Made by Giovanne Marrone</p>
             <div className="social">
-            <a href="https://github.com/kovuzera" target="_blank" rel="noreferrer"><img src={ github } alt="ícone github" className="github-link"/></a>
-            <a href="https://www.linkedin.com/in/giomarrone/" target="_blank" rel="noreferrer"><img src={ linkedin } alt="linkedin-link" className="linkedin-link"/></a>
+              <a
+                href="https://github.com/kovuzera"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={github} alt="ícone github" className="github-link" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/giomarrone/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={linkedin}
+                  alt="linkedin-link"
+                  className="linkedin-link"
+                />
+              </a>
             </div>
           </div>
         </Content>
