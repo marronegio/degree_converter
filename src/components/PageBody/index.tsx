@@ -97,8 +97,8 @@ export function PageBody() {
           <div className="creator-area">
             <p>Made by Giovanne Marrone</p>
             <div className="social">
-            <a href="https://github.com/kovuzera" target="_blank"><img src={ github } alt="ícone github" className="github-link"/></a>
-            <a href="https://www.linkedin.com/in/giomarrone/" target="_blank"><img src={ linkedin } alt="linkedin-link" className="linkedin-link"/></a>
+            <a href="https://github.com/kovuzera" target="_blank" rel="noreferrer"><img src={ github } alt="ícone github" className="github-link"/></a>
+            <a href="https://www.linkedin.com/in/giomarrone/" target="_blank" rel="noreferrer"><img src={ linkedin } alt="linkedin-link" className="linkedin-link"/></a>
             </div>
           </div>
         </Content>
